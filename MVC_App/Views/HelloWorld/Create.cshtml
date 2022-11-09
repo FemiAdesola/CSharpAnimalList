@@ -1,0 +1,45 @@
+﻿@*for calling model for data bind*@
+@model AnimalViewModel
+
+
+<h1>Create ddd</h1>
+<hr />
+
+<div class="row">
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header">
+                <h5>Create  new animal profile</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-controller="HelloWorld" asp-action="CreateNewAnimal" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Animal Name</label>
+                        <input asp-for=Name type="text" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Animal Age</label>
+                        <input asp-for=Age type="number" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Animal Description</label>
+                        <textarea asp-for=Description type="text" class="form-control"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-secondary">Save</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>

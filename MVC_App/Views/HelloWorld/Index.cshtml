@@ -1,0 +1,24 @@
+﻿@*@model MVC_App.Models.AnimalViewModel;*@
+
+@model List<MVC_App.Models.AnimalViewModel>;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Hello world page</h1>
+<p>Ths is the index page of the HTML </p>
+
+<ul>
+    @foreach (var animal in Model)
+    {
+    <li>This is @animal.Name and @animal.Age years old. @animal.Description </li>
+    }
+</ul>
+
+
+
+@*<h5>A dog named @Model.Name say hello </h5>
+<h5>@Model.Name is @Model.Age years old</h5>
+<h5>@Model.Description</h5>*@
